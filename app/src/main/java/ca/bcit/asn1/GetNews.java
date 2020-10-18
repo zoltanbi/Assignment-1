@@ -15,12 +15,12 @@ public class GetNews extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_results);
+        setContentView(R.layout.get_news_layout);
         searchResultListView = findViewById(R.id.search_results);
 
 
         MyAsyncTask task = new MyAsyncTask();
-        task.setKeyword(getIntent().getStringExtra(MainActivity.KEYWORD));
+        task.setKeyword(getIntent().getStringExtra(MainActivity.TAGHELPER));
         task.execute();
     }
 
@@ -37,7 +37,8 @@ public class GetNews extends AppCompatActivity {
         protected Void doInBackground(Void... arg0) {
             HttpHandler sh = new HttpHandler();
             String url = String.format(
-                    "https://newsapi.org/v2/everything?q=%s&sortBy=publishedAt&apiKey=b516a9c911354f97b24c0650bc5818b0", this.keyword);
+                    "https://newsapi.org/v2/everything?q=%s&sortBy=publishedAt&apiKey=b516a9c911354f97b24c0650bc5818b0",
+                    this.keyword);
             // Making a request to url and getting response
             String jsonStr = sh.makeServiceCall(url);
 

@@ -34,20 +34,21 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
         // Populate the data into the template view using the data object
         TextView textView = convertView.findViewById(R.id.article_title);
         if (article.getTitle() != null) {
+
             textView.setText(article.getTitle());
         } else {
-            //textView.setText(R.string.default_title);
             textView.setText("Title");
         }
 
+        //Click listener
         convertView.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(_context, ArticleContent.class);
                 Gson gson = new Gson();
-                String articleInStr = gson.toJson(article, Article.class);
-                i.putExtra(MainActivity.KEYWORD, articleInStr);
+
+                String articleString = gson.toJson(article, Article.class);
+                i.putExtra(MainActivity.TAGHELPER, articleString);
                 _context.startActivity(i);
             }
         });

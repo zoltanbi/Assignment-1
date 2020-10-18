@@ -1,11 +1,11 @@
 package ca.bcit.asn1;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 import android.os.Bundle;
 
@@ -16,13 +16,13 @@ import java.net.URL;
 
 public class ArticleContent extends AppCompatActivity {
     private Article article;
-    private ImageView articleImage;
+    private ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_article_details_needschange);
-       String articleInStr = getIntent().getStringExtra(MainActivity.KEYWORD);
+        setContentView(R.layout.article_info_layout);
+       String articleInStr = getIntent().getStringExtra(MainActivity.TAGHELPER);
         if (articleInStr == null) {
             return;
         }
@@ -30,7 +30,7 @@ public class ArticleContent extends AppCompatActivity {
         Gson gson = new Gson();
         article = gson.fromJson(articleInStr, Article.class);
 
-        articleImage = findViewById(R.id.article_image);
+        image = findViewById(R.id.article_image);
 
         TextView articleTitle = findViewById(R.id.article_title);
         articleTitle.setText(article.getTitle());
@@ -72,8 +72,8 @@ public class ArticleContent extends AppCompatActivity {
 
             super.onPostExecute(bitmap);
             if (bitmap != null) {
-                if (articleImage != null) {
-                    articleImage.setImageBitmap(bitmap);
+                if (image != null) {
+                    image.setImageBitmap(bitmap);
                 }
             }
         }
