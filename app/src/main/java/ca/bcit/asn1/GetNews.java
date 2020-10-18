@@ -15,7 +15,7 @@ public class GetNews extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.get_news_layout);
-        searchResults = findViewById(R.id.search_results);
+        searchResults = findViewById(R.id.searchResults);
 
         MyAsyncTask task = new MyAsyncTask();
         task.setKeyword(getIntent().getStringExtra(MainActivity.TAGHELPER));

@@ -34,7 +34,7 @@
 
 
         <EditText
-            android:id="@+id/search_bar"
+            android:id="@+id/searchBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -45,7 +45,7 @@
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/search_button"
+            android:id="@+id/searchButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#800000"

@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view){
-        Button search = findViewById(R.id.search_button);
-        EditText searchBar = findViewById(R.id.search_bar);
+        Button search = findViewById(R.id.searchButton);
+        EditText searchBar = findViewById(R.id.searchBar);
         String keyword = searchBar.getText().toString();
         if ((view == search && !keyword.isEmpty())){
             Intent i = new Intent(this, GetNews.class);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button = findViewById(R.id.search_button);
+        Button button = findViewById(R.id.searchButton);
         button.setOnClickListener(this);
     }
 }
