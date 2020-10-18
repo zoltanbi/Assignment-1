@@ -25,7 +25,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
     public View getView(int position, View convertView, ViewGroup parent) {
         final Activity activity = (Activity) _context;
         // Get the data item for this position
-        Article article = getItem(position);
+        final Article article = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.article_list_layout, parent, false);
@@ -45,7 +45,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
 //
 //            @Override
 //            public void onClick(View v) {
-//                Intent i = new Intent(context, DetailsActivity.class);
+//                Intent i = new Intent(_context, DetailsActivity.class);
 //                Gson gson = new Gson();
 //                String articleInStr = gson.toJson(article, Article.class);
 //                i.putExtra(SearchResults.ARTICLE, articleInStr);
