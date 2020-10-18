@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFDF00"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,11 +15,15 @@
         android:gravity="center"/>
 
     <TextView
-        android:id="@+id/search_prompt"
+        android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Enter a keyword to search for news"/>
+        android:text="Enter a keyword to search for news!!"
+        android:textColor="#800000"
+        android:textAlignment="center"
+        android:textSize="35sp"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,12 +31,16 @@
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
         android:gravity="center">
+
+
         <EditText
             android:id="@+id/search_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint= "Enter a Word"
+            android:textColorHint="#800000"
+            android:background="#FFFFFF"
             android:inputType="textPersonName"
             android:textAlignment="center" />
 
@@ -39,7 +48,12 @@
             android:id="@+id/search_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search"/>
+            android:background="#800000"
+            android:textColor="#FFFFFF"
+            android:text="Search"
+            android:layout_marginLeft="20dp"/>
+
+
     </LinearLayout>
 
 </LinearLayout>
