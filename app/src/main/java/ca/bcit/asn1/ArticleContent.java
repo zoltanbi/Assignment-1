@@ -22,7 +22,7 @@ public class ArticleContent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_article_details_needschange);
-        String articleInStr = getIntent().getStringExtra(GetNews.ARTICLE);
+       String articleInStr = getIntent().getStringExtra(MainActivity.KEYWORD);
         if (articleInStr == null) {
             return;
         }

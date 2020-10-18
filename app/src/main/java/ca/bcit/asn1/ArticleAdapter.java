@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -48,7 +47,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
                 Intent i = new Intent(_context, ArticleContent.class);
                 Gson gson = new Gson();
                 String articleInStr = gson.toJson(article, Article.class);
-                i.putExtra(GetNews.ARTICLE, articleInStr);
+                i.putExtra(MainActivity.KEYWORD, articleInStr);
                 _context.startActivity(i);
             }
         });

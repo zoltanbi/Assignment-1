@@ -4,15 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.ListView;
-import android.widget.ProgressBar;
+
 
 import com.google.gson.Gson;
 
 public class GetNews extends AppCompatActivity {
-    public final static String ARTICLE = "ca.bcit.asn1";
     private ListView searchResultListView;
 
     @Override
@@ -39,7 +36,8 @@ public class GetNews extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... arg0) {
             HttpHandler sh = new HttpHandler();
-            String url = String.format("https://newsapi.org/v2/everything?q=bitcoin&from=2019-12-28&sortBy=publishedAt&apiKey=b516a9c911354f97b24c0650bc5818b0", this.keyword);
+            String url = String.format(
+                    "https://newsapi.org/v2/everything?q=%s&sortBy=publishedAt&apiKey=b516a9c911354f97b24c0650bc5818b0", this.keyword);
             // Making a request to url and getting response
             String jsonStr = sh.makeServiceCall(url);
 
