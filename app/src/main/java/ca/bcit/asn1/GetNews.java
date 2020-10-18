@@ -6,18 +6,16 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.ListView;
 
-
 import com.google.gson.Gson;
 
 public class GetNews extends AppCompatActivity {
-    private ListView searchResultListView;
+    private ListView searchResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.get_news_layout);
-        searchResultListView = findViewById(R.id.search_results);
-
+        searchResults = findViewById(R.id.search_results);
 
         MyAsyncTask task = new MyAsyncTask();
         task.setKeyword(getIntent().getStringExtra(MainActivity.TAGHELPER));
@@ -27,7 +25,7 @@ public class GetNews extends AppCompatActivity {
     private class MyAsyncTask extends AsyncTask<Void, Void, Void> {
 
         private String keyword = "";
-        private BaseArticles newsSearchResult;
+        private BaseArticles searchResult;
 
         public void setKeyword(String keyword) {
             this.keyword = keyword;
@@ -43,15 +41,15 @@ public class GetNews extends AppCompatActivity {
             String jsonStr = sh.makeServiceCall(url);
 
             Gson gson = new Gson();
-            newsSearchResult = gson.fromJson(jsonStr, BaseArticles.class);
+            searchResult = gson.fromJson(jsonStr, BaseArticles.class);
             return null;
         }
 
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            ArticleAdapter articleAdapter= new ArticleAdapter(GetNews.this, newsSearchResult.getArticles());
-            searchResultListView.setAdapter(articleAdapter);
+            ArticleAdapter articleAdapter= new ArticleAdapter(GetNews.this, searchResult.getArticles());
+            searchResults.setAdapter(articleAdapter);
         }
     }
 }

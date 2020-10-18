@@ -32,7 +32,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
 
         // Lookup view for data population
         // Populate the data into the template view using the data object
-        TextView textView = convertView.findViewById(R.id.article_title);
+        TextView textView = convertView.findViewById(R.id.title);
         if (article.getTitle() != null) {
 
             textView.setText(article.getTitle());

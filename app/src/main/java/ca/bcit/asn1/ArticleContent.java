@@ -30,28 +30,28 @@ public class ArticleContent extends AppCompatActivity {
         Gson gson = new Gson();
         article = gson.fromJson(articleInStr, Article.class);
 
-        image = findViewById(R.id.article_image);
+        image = findViewById(R.id.image);
 
-        TextView articleTitle = findViewById(R.id.article_title);
-        articleTitle.setText(article.getTitle());
+        TextView title = findViewById(R.id.title);
+        title.setText(article.getTitle());
 
-        TextView articleAuthor = findViewById(R.id.article_author);
-        articleAuthor.setText(article.getAuthor());
+        TextView source = findViewById(R.id.sourceName);
+        source.setText(article.getName());
 
-        TextView articleBody = findViewById(R.id.article_body);
-        articleBody.setText(article.getContent());
+        TextView author = findViewById(R.id.author);
+        author.setText(article.getAuthor());
 
-        TextView articleDescription = findViewById(R.id.article_description);
-        articleDescription.setText(article.getDescription());
+        TextView body = findViewById(R.id.description);
+        body.setText(article.getDescription());
 
-        TextView articlePublishedDate = findViewById(R.id.article_publish_date);
-        articlePublishedDate.setText(article.getPublishedAt());
+        TextView url = findViewById(R.id.url);
+        url.setText(article.getUrl());
 
-        TextView articleSource = findViewById(R.id.article_source);
-        articleSource.setText(article.getName());
+        TextView publishedDate = findViewById(R.id.publishedAt);
+        publishedDate.setText(article.getPublishedAt());
 
-        TextView articleSourceURL = findViewById(R.id.source_url);
-        articleSourceURL.setText(article.getUrl());
+        TextView content = findViewById(R.id.content);
+        content.setText(article.getContent());
 
         ImageDownloader downloader = new ImageDownloader();
         downloader.execute();
