@@ -1,3 +1,27 @@
 <resources>
-    <string name="app_name">Asn1</string>
+    <string name="app_name">Assn1</string>
+    <string name="search_hint">Enter a Keyword</string>
+    <string name="student_names">Jihyo Kim, Spencer Wilson</string>
+    <string name="search_prompt">Enter a keyword and hit search to find news</string>
+    <string name="search_button_text">Search</string>
+    <string name="search_results_title">Search Results</string>
+    <string name="default_title">Default Title</string>
+    <string name="default_author_name">Default Author</string>
+    <string name="default_article_body">Default Article body</string>
+    <string name="default_publish_date">Feb 1st, 2020</string>
+    <string name="label_action_bar">News</string>
+    <string name="label_source_name">Source: </string>
+    <string name="label_publishedAt">Published At: </string>
+    <string name="label_source_url">Source URL: </string>
+    <string name="default_source">Source</string>
+    <string name="label_description">Description: </string>
+    <string name="label_contents">Contents: </string>
+    <string name="label_author">Author: </string>
+    <string name="article_image_content_description">An Image of Article</string>
+    <string-array name="test">
+        <item>Hello</item>
+        <item>World</item>
+        <item>Hello</item>
+        <item>World</item>
+    </string-array>
 </resources>

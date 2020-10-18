@@ -41,17 +41,17 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
             textView.setText("Title");
         }
 
-//        convertView.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(_context, DetailsActivity.class);
-//                Gson gson = new Gson();
-//                String articleInStr = gson.toJson(article, Article.class);
-//                i.putExtra(SearchResults.ARTICLE, articleInStr);
-//                context.startActivity(i);
-//            }
-//        });
+        convertView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(_context, ArticleContent.class);
+                Gson gson = new Gson();
+                String articleInStr = gson.toJson(article, Article.class);
+                i.putExtra(GetNews.ARTICLE, articleInStr);
+                _context.startActivity(i);
+            }
+        });
 
         // Return the completed view to render on screen
         return convertView;
