@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">Asn1</string>
-    <string name="results">Search Results</string>
+    <string name="search_results_title">Search Results</string>
     <string name="default_title">Default Title</string>
     <string name="default_author_name">Default Author</string>
     <string name="default_article_body">Default Article body</string>
     <string name="default_publish_date">Feb 1st, 2020</string>
     <string name="label_action_bar">News</string>
-    <string name="label_source_name">Source: </string>
-    <string name="label_publishedAt">Published At: </string>
-    <string name="label_source_url">Source URL: </string>
-    <string name="default_source">Source</string>
-    <string name="label_description">Description: </string>
-    <string name="label_contents">Contents: </string>
-    <string name="label_author">Author: </string>
-    <string name="article_image_content_description">An Image of Article</string>
+    <string name="source_display">Source: </string>
+    <string name="published">Published: </string>
+    <string name="url">URL: </string>
+    <string name="source">Source</string>
+    <string name="description">Description: </string>
+    <string name="contents">Contents: </string>
+    <string name="display_author">Author: </string>
+    <string name="image_of_article">An Image of Article</string>
     <string-array name="test">
         <item>Hello</item>
         <item>World</item>

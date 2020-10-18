@@ -25,6 +25,8 @@
             <ImageView
                 android:id="@+id/image"
                 android:contentDescription="@string/article_image_content_description"
+                android:id="@+id/article_image"
+                android:contentDescription="@string/image_of_article"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -38,13 +40,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/label_source_name"
+                    android:text="@string/source_display"
                     android:layout_marginRight="12dp"/>
                 <TextView
                     android:id="@+id/sourceName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/default_source" />
+                    android:text="@string/source" />
             </LinearLayout>
 
             <LinearLayout
@@ -52,14 +54,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="@string/label_author"
+                    android:text="@string/default_author_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"/>
                 <TextView
                     android:id="@+id/author"
                     android:textColor="@android:color/black"
-                    android:text="@string/default_author_name"
+                    android:text="@string/display_author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="16dp"/>
@@ -85,7 +87,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+<<<<<<< Updated upstream
                     android:text="@string/label_source_url"
+=======
+                    android:text="@string/published"
+>>>>>>> Stashed changes
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"/>
@@ -102,7 +108,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
+<<<<<<< Updated upstream
                     android:text="@string/label_publishedAt"
+=======
+                    android:text="@string/url"
+>>>>>>> Stashed changes
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"/>
@@ -117,7 +127,26 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< Updated upstream
                 android:text="@string/label_contents"
+=======
+                android:text="@string/description"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"/>
+            <TextView
+                android:id="@+id/article_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="@string/default_article_body"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contents"
+>>>>>>> Stashed changes
                 android:textSize="18sp"
                 android:layout_marginTop="16dp"/>
             <TextView
